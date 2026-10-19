@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primeiros Passos na Leitura · Lê Comigo</title>
+<meta name="description" content="Guia de 15 dias para pais ensinarem os sons das letras em casa pelo método fônico. 15 minutos por dia, com um capítulo para manter a calma.">
+<meta property="og:title" content="Primeiros Passos na Leitura · Lê Comigo">
+<meta property="og:description" content="15 dias, 15 minutos por dia, sem estresse. O guia para ensinar os sons das letras em casa.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1f7a8c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1f7a8c; --teal-escuro:#165e6c; --coral:#ef6461; --coral-escuro:#d94f4c;
+  --mel:#f6c34a; --mel-claro:#fff4d6; --ceu:#e6f5fc; --lilas:#f1ecfb; --verde:#e7f5ea;
+  --texto:#24323a; --suave:#5b6b73; --linha:#dfe7ea; --branco:#fff;
+  --raio:18px; --sombra:0 10px 30px rgba(31,122,140,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Nunito,system-ui,sans-serif;color:var(--texto);background:var(--branco);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:"Baloo 2",Nunito,sans-serif;line-height:1.15;margin:0 0 .5em;color:var(--teal-escuro)}
+h1{font-size:clamp(2rem,6vw,3.3rem)}
+h2{font-size:clamp(1.6rem,4.5vw,2.3rem);text-align:center}
+h3{font-size:1.25rem}
+p{margin:0 0 1em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.estreito{max-width:720px;margin:0 auto}
+section{padding:64px 0}
+.centro{text-align:center}
+.sub{color:var(--suave);text-align:center;max-width:620px;margin:0 auto 2.2em}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.marca{font-family:"Baloo 2";font-weight:800;color:var(--coral);letter-spacing:.06em;font-size:1.15rem;text-decoration:none}
+.marca span{color:var(--teal)}
+.topo .botao{padding:9px 18px;font-size:.95rem}
+
+/* botões */
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:.4em;background:var(--coral);color:#fff;font-weight:800;text-decoration:none;border-radius:999px;padding:16px 30px;font-size:1.1rem;box-shadow:0 6px 0 var(--coral-escuro);transition:transform .12s,box-shadow .12s;border:0;cursor:pointer;font-family:inherit}
+.botao:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--coral-escuro)}
+.botao:active{transform:translateY(3px);box-shadow:0 2px 0 var(--coral-escuro)}
+.selos{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;color:var(--suave);font-size:.95rem}
+.selos span::before{content:"✓ ";color:var(--teal);font-weight:800}
+.aviso-link{display:none;margin-top:10px;font-size:.9rem;color:var(--suave)}
+.sem-link .aviso-link{display:block}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--ceu) 0%,#fff 100%);padding:48px 0 56px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.etiqueta{display:inline-block;background:var(--mel-claro);color:#8a5a00;font-weight:800;font-size:.85rem;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.hero p.lead{font-size:1.2rem;color:var(--suave);max-width:540px}
+.preco-hero{font-size:1rem;color:var(--suave);margin:18px 0 18px}
+.preco-hero strong{font-family:"Baloo 2";font-size:2.1rem;color:var(--teal-escuro);vertical-align:-3px}
+.mockup{position:relative;height:460px}
+.mockup .livro{position:absolute;right:70px;top:0;width:300px;border-radius:10px;box-shadow:0 22px 50px rgba(22,94,108,.28);transform:rotate(-4deg)}
+.mockup .celular{position:absolute;right:0;bottom:0;width:170px;border:8px solid #22313a;border-radius:28px;box-shadow:0 18px 40px rgba(0,0,0,.25);overflow:hidden;background:#22313a}
+.mockup .celular img{border-radius:18px}
+.mockup .zuzu{position:absolute;left:0;bottom:-10px;width:150px;filter:drop-shadow(0 8px 12px rgba(0,0,0,.12))}
+
+/* abertura */
+.abertura{font-size:1.2rem}
+.abertura strong{color:var(--teal-escuro)}
+
+/* comparação */
+.compara{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:32px 0 10px}
+.caixa{border-radius:var(--raio);padding:26px 22px;text-align:center}
+.caixa .eq{font-family:"Baloo 2";font-weight:800;font-size:clamp(1.8rem,6vw,2.6rem);line-height:1.1;margin:6px 0}
+.caixa small{display:block;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
+.errado{background:#fdeceb;color:#a33a37}
+.certo{background:var(--verde);color:#22703a}
+
+/* cards */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--linha);border-radius:var(--raio);padding:24px;box-shadow:var(--sombra)}
+.card .num{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--mel);color:#5a3d00;font-family:"Baloo 2";font-weight:800;font-size:1.15rem;margin-bottom:10px}
+.card p{margin:0;color:var(--suave)}
+.fundo-mel{background:var(--mel-claro)}
+.fundo-ceu{background:var(--ceu)}
+.fundo-lilas{background:var(--lilas)}
+
+/* galeria */
+.galeria{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 18px;-webkit-overflow-scrolling:touch}
+.galeria figure{flex:0 0 240px;margin:0;scroll-snap-align:start}
+.galeria button{all:unset;cursor:zoom-in;display:block;border-radius:10px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.12);background:#fff}
+.galeria button:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.galeria figcaption{font-size:.9rem;color:var(--suave);margin-top:8px;text-align:center;font-weight:700}
+.dica-arraste{text-align:center;color:var(--suave);font-size:.9rem;margin-top:4px}
+dialog{border:0;padding:0;border-radius:12px;max-width:min(92vw,640px);background:#fff}
+dialog::backdrop{background:rgba(20,30,35,.75)}
+dialog img{max-height:86vh;width:auto;margin:0 auto}
+dialog form{position:absolute;top:8px;right:8px}
+dialog .fechar{all:unset;cursor:pointer;background:#fff;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;font-size:1.3rem;font-weight:800;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+
+/* rotina */
+.rotina{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:10px}
+.bloco{background:#fff;border-radius:14px;padding:16px 10px;text-align:center;border:2px solid var(--linha)}
+.bloco b{display:block;font-family:"Baloo 2";font-size:1.6rem;color:var(--coral);line-height:1}
+.bloco span{font-size:.9rem;color:var(--suave);font-weight:700}
+
+/* recebe */
+.recebe{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.lista{list-style:none;padding:0;margin:0}
+.lista li{padding:14px 0 14px 44px;border-bottom:1px dashed var(--linha);position:relative}
+.lista li::before{content:"";position:absolute;left:0;top:14px;width:30px;height:30px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/16px no-repeat}
+.lista strong{color:var(--teal-escuro)}
+.pilha{position:relative;height:420px}
+.pilha img{position:absolute;width:56%;border-radius:8px;box-shadow:0 14px 34px rgba(0,0,0,.18)}
+.pilha img:nth-child(1){left:0;top:20px;transform:rotate(-6deg)}
+.pilha img:nth-child(2){left:22%;top:0;transform:rotate(2deg);z-index:2}
+.pilha img:nth-child(3){right:0;top:40px;transform:rotate(7deg)}
+
+/* honesto e garantia */
+.honesto{background:#fff;border-left:6px solid var(--mel);border-radius:12px;padding:22px 24px;box-shadow:var(--sombra)}
+.garantia{display:flex;gap:24px;align-items:center;background:var(--verde);border-radius:var(--raio);padding:28px}
+.garantia .selo{flex:0 0 110px;height:110px;border-radius:50%;background:#2f8f4e;color:#fff;display:grid;place-items:center;text-align:center;font-family:"Baloo 2";font-weight:800;line-height:1;font-size:.95rem;box-shadow:inset 0 0 0 6px rgba(255,255,255,.35)}
+.garantia .selo b{display:block;font-size:2.4rem}
+.garantia h3{color:#22703a}
+
+/* oferta */
+.oferta{background:linear-gradient(160deg,var(--teal) 0%,var(--teal-escuro) 100%);color:#fff;border-radius:28px;padding:44px 32px;text-align:center;position:relative;overflow:hidden}
+.oferta h2{color:#fff}
+.oferta p{color:#dff1f4}
+.oferta .preco{font-family:"Baloo 2";font-weight:800;font-size:4rem;line-height:1;color:var(--mel);margin:8px 0 4px}
+.oferta .selos{justify-content:center;color:#dff1f4}
+.oferta .selos span::before{color:var(--mel)}
+.oferta .aviso-link{color:#dff1f4}
+.oferta .zuzu-oferta{position:absolute;right:-10px;bottom:-14px;width:150px;opacity:.95}
+
+/* faq */
+details{background:#fff;border:1px solid var(--linha);border-radius:14px;margin-bottom:10px;padding:0 20px}
+summary{cursor:pointer;font-weight:800;padding:18px 28px 18px 0;list-style:none;position:relative;color:var(--teal-escuro)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:12px;font-size:1.6rem;color:var(--coral);font-weight:800}
+details[open] summary::after{content:"–"}
+details p{color:var(--suave);padding-bottom:6px}
+
+footer{background:#22313a;color:#b8c6cc;padding:36px 0 110px;font-size:.9rem}
+footer a{color:#fff}
+
+/* barra fixa no celular */
+.barra{display:none}
+
+@media (max-width:860px){
+  .hero .wrap,.recebe{grid-template-columns:1fr}
+  .mockup{height:380px;max-width:400px;margin:0 auto;width:100%}
+  .mockup .livro{width:230px;right:auto;left:50%;margin-left:-150px}
+  .mockup .celular{width:130px}
+  .mockup .zuzu{width:110px}
+  .grade{grid-template-columns:1fr}
+  .rotina{grid-template-columns:repeat(3,1fr)}
+  .pilha{height:330px;max-width:420px;margin:0 auto;width:100%}
+  .topo .botao{display:none}
+  .barra{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--linha);padding:10px 16px calc(10px + env(safe-area-inset-bottom));align-items:center;gap:12px;box-shadow:0 -6px 20px rgba(0,0,0,.08);transform:translateY(110%);transition:transform .25s}
+  .barra.visivel{transform:none}
+  .barra .p{font-family:"Baloo 2";font-weight:800;font-size:1.5rem;color:var(--teal-escuro);line-height:1}
+  .barra .p small{display:block;font-family:Nunito;font-size:.75rem;color:var(--suave);font-weight:700}
+  .barra .botao{flex:1;padding:13px 16px;font-size:1rem}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  section{padding:48px 0}
+  .wrap{padding:0 16px}
+  .compara{grid-template-columns:1fr}
+  .garantia{flex-direction:column;text-align:center}
+  .oferta{padding:36px 20px 120px}
+  .oferta .preco{font-size:3.3rem}
+  .botao{width:100%}
+  .topo .botao{width:auto}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.botao,.barra{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <a href="#" class="marca">LÊ <span>COMIGO</span></a>
+    <a href="#oferta" class="botao" data-comprar>Quero o guia</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="etiqueta">Método fônico em casa · crianças de 4 a 7 anos</span>
+      <h1>Primeiros Passos na Leitura</h1>
+      <p class="lead">15 dias, 15 minutos por dia, sem estresse. O guia para pais ensinarem o método fônico em casa, com um plano pronto, a mascote Zuzu e um capítulo só sobre como manter a calma.</p>
+      <p class="preco-hero"><strong>R$ 27</strong> &nbsp;pagamento único, acesso na hora</p>
+      <a href="#oferta" class="botao" data-comprar>Quero começar hoje por R$ 27</a>
+      <p class="aviso-link">O link de compra entra no ar em breve.</p>
+      <div class="selos"><span>Garantia de 7 dias</span><span>Para imprimir e para o celular</span><span>Entrega pelo e-mail</span></div>
+    </div>
+    <div class="mockup" aria-hidden="true">
+      <img class="livro" src="img/capa.jpg" alt="" width="640" height="905">
+      <div class="celular"><img src="img/cel-capa.jpg" alt="" width="360" height="640"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap estreito abertura">
+    <p>Você já sentou com seu filho para ensinar as letras e acabou irritado, ou viu ele desanimar?</p>
+    <p>Quase nunca é falta de paciência ou de capacidade. Ninguém ensinou os pais <strong>a ordem certa dos sons</strong> nem <strong>como manter a calma na hora</strong>. Este guia faz as duas coisas, e o primeiro som vocês fazem juntos nos primeiros 10 minutos.</p>
+
+    <div class="compara">
+      <div class="caixa errado"><small>Como quase todo mundo ensina</small><div class="eq">bê + a = ?</div>A criança ouve "bê" e "a" e não chega em "ba".</div>
+      <div class="caixa certo"><small>Como o guia ensina</small><div class="eq">b + a = ba</div>O som curtinho da letra, que se junta sozinho com a vogal.</div>
+    </div>
+  </div>
+</section>
+
+<section class="fundo-mel">
+  <div class="wrap">
+    <h2>Por que este guia é diferente</h2>
+    <p class="sub">Não é mais um kit com 200 atividades soltas. É um caminho: o que fazer hoje, em 15 minutos, por 15 dias.</p>
+    <div class="grade">
+      <div class="card"><div class="num">1</div><h3>Sons antes de letras</h3><p>Seu filho aprende o som certo, sem o "bê, cê, dê" que atrapalha, com a posição da boca desenhada.</p></div>
+      <div class="card"><div class="num">2</div><h3>A ordem certa</h3><p>Primeiro os sons que dá para esticar (vvv, lll), depois os que estouram (b, p, t). Por isso dá para ir com calma.</p></div>
+      <div class="card"><div class="num">3</div><h3>Uma historinha por som</h3><p>Cada som tem uma historinha, um gesto e uma pergunta. A criança fica mais atenta e lembra.</p></div>
+      <div class="card"><div class="num">4</div><h3>Um capítulo para os pais</h3><p>O que dizer, o que evitar e o que fazer quando você perder a paciência.</p></div>
+      <div class="card"><div class="num">5</div><h3>Dois formatos</h3><p>Versão para imprimir e versão para ler no celular, com índice de toque.</p></div>
+      <div class="card"><div class="num">6</div><h3>Plano de 5 minutos</h3><p>Para os dias corridos. Ninguém perde o fio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="por-dentro">
+  <div class="wrap">
+    <h2>Veja por dentro</h2>
+    <p class="sub">Páginas reais do guia. Toque para ampliar.</p>
+    <div class="galeria" id="galeria">
+      <figure><button type="button" data-img="img/dia1.jpg" aria-label="Ampliar: Dia 1"><img src="img/dia1.jpg" alt="Página do Dia 1: sons A e I com historinhas" loading="lazy" width="640" height="905"></button><figcaption>Dia 1: escutar antes de ler</figcaption></figure>
+      <figure><button type="button" data-img="img/segredo.jpg" aria-label="Ampliar: O segredo"><img src="img/segredo.jpg" alt="Página O segredo: o som, não o nome" loading="lazy" width="640" height="905"></button><figcaption>O segredo: o som, não o nome</figcaption></figure>
+      <figure><button type="button" data-img="img/calma.jpg" aria-label="Ampliar: Guia dos pais"><img src="img/calma.jpg" alt="Página Guia dos pais: manter a calma" loading="lazy" width="640" height="905"></button><figcaption>Guia dos pais: manter a calma</figcaption></figure>
+      <figure><button type="button" data-img="img/rotina.jpg" aria-label="Ampliar: Como fica o dia"><img src="img/rotina.jpg" alt="Página Como fica o dia em 15 minutos" loading="lazy" width="640" height="905"></button><figcaption>Como fica o dia (15 min)</figcaption></figure>
+      <figure><button type="button" data-img="img/dia3.jpg" aria-label="Ampliar: Dia 3"><img src="img/dia3.jpg" alt="Página do Dia 3: a letra V" loading="lazy" width="640" height="905"></button><figcaption>Dia 3: a letra V</figcaption></figure>
+      <figure><button type="button" data-img="img/recorte-letras.jpg" aria-label="Ampliar: Folha de recorte"><img src="img/recorte-letras.jpg" alt="Folha de recorte com cartas de letras" loading="lazy" width="640" height="905"></button><figcaption>Folha de recorte: letras</figcaption></figure>
+      <figure><button type="button" data-img="img/recorte-silabas.jpg" aria-label="Ampliar: Sílabas"><img src="img/recorte-silabas.jpg" alt="Folha de recorte com sílabas" loading="lazy" width="640" height="905"></button><figcaption>Folha de recorte: sílabas</figcaption></figure>
+      <figure><button type="button" data-img="img/tabela.jpg" aria-label="Ampliar: Tabela de sílabas"><img src="img/tabela.jpg" alt="Tabela de sílabas" loading="lazy" width="640" height="905"></button><figcaption>Tabela de sílabas</figcaption></figure>
+      <figure><button type="button" data-img="img/recorte-medalhas.jpg" aria-label="Ampliar: Medalhas"><img src="img/recorte-medalhas.jpg" alt="Medalhas dos dias 5, 10 e 15" loading="lazy" width="640" height="905"></button><figcaption>Medalhas dos dias 5, 10 e 15</figcaption></figure>
+      <figure><button type="button" data-img="img/cel-dia1.jpg" aria-label="Ampliar: versão de celular"><img src="img/cel-dia1.jpg" alt="Tela do Dia 1 na versão de celular" loading="lazy" width="360" height="640"></button><figcaption>Versão para o celular</figcaption></figure>
+    </div>
+    <p class="dica-arraste">Arraste para o lado →</p>
+  </div>
+</section>
+
+<section class="fundo-ceu">
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <p class="sub">Todo dia é igual. A criança aprende a rotina, e você também.</p>
+    <div class="rotina">
+      <div class="bloco"><b>2</b><span>min de jogo de escuta</span></div>
+      <div class="bloco"><b>3</b><span>min de som novo</span></div>
+      <div class="bloco"><b>3</b><span>min de palavras</span></div>
+      <div class="bloco"><b>4</b><span>min juntando sons e lendo</span></div>
+      <div class="bloco"><b>2</b><span>min de desafio</span></div>
+      <div class="bloco"><b>1</b><span>min de fechamento</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap recebe">
+    <div class="pilha" aria-hidden="true">
+      <img src="img/capa.jpg" alt="" loading="lazy" width="640" height="905">
+      <img src="img/dia1.jpg" alt="" loading="lazy" width="640" height="905">
+      <img src="img/recorte-letras.jpg" alt="" loading="lazy" width="640" height="905">
+    </div>
+    <div>
+      <h2 style="text-align:left">O que você recebe</h2>
+      <ul class="lista">
+        <li><strong>E-book para imprimir</strong> (PDF A4, 32 páginas): plano de 15 dias, historinhas ilustradas, guia dos pais, tabela de sílabas, marcador de progresso e livrinho.</li>
+        <li><strong>E-book para o celular</strong> (PDF vertical, letras grandes): o mesmo conteúdo em telas curtas, com índice de toque e botão de "próximo dia".</li>
+        <li><strong>Folha de recorte</strong> (PDF, 8 páginas): 14 cartas de letras, 45 sílabas, 75 palavras, 11 frases e 3 medalhas para imprimir e cortar.</li>
+        <li><strong>Jogos de escuta e desafios</strong> simples, que usam o que você já tem em casa.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="fundo-lilas">
+  <div class="wrap estreito">
+    <h2>Para quem é</h2>
+    <p class="centro">Pais, mães e responsáveis de crianças de 4 a 7 anos que querem ajudar em casa, sem substituir a escola. Não precisa ter formação: o guia explica tudo para quem nunca ensinou.</p>
+    <div class="honesto" style="margin-top:28px">
+      <h3>Importante</h3>
+      <p style="margin:0">Cada criança tem o seu ritmo. Este guia não promete que a criança estará lendo em 15 dias, e não substitui a avaliação de um pedagogo, fonoaudiólogo ou pediatra. Ele ajuda você a dar os primeiros passos com método e carinho.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap estreito">
+    <div class="garantia">
+      <div class="selo"><div><b>7</b>dias de<br>garantia</div></div>
+      <div>
+        <h3>Teste o dia 1 sem risco</h3>
+        <p style="margin:0">Se você não gostar, devolvemos o valor integral em até 7 dias, sem perguntas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="oferta" style="padding-top:8px">
+  <div class="wrap estreito">
+    <div class="oferta">
+      <h2>Comece hoje</h2>
+      <p>E-book para imprimir + e-book para o celular + folha de recorte com 14 cartas, 45 sílabas, 75 palavras, frases e medalhas.</p>
+      <div class="preco">R$ 27</div>
+      <p>pagamento único</p>
+      <a href="#oferta" class="botao" data-comprar>Quero começar hoje por R$ 27</a>
+      <p class="aviso-link">O link de compra entra no ar em breve.</p>
+      <div class="selos"><span>Garantia de 7 dias</span><span>Acesso na hora, pelo e-mail</span></div>
+      <img class="zuzu-oferta" src="img/zuzu-medalha.webp" alt="" loading="lazy" width="320" height="449">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap estreito">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Com que idade posso começar?</summary><p>A partir dos 4 anos, com jogos de som. Aos 6 ou 7, dá para avançar mais rápido nas sílabas.</p></details>
+    <details><summary>Preciso ter formação?</summary><p>Não. O guia explica tudo para quem nunca ensinou.</p></details>
+    <details><summary>Posso imprimir?</summary><p>Sim, para uso em casa com os seus filhos. Não pode revender nem compartilhar.</p></details>
+    <details><summary>Preciso imprimir tudo?</summary><p>Não. Você pode usar só o e-book do celular e imprimir apenas a Folha de recorte (as cartas).</p></details>
+    <details><summary>E se meu filho não acompanhar o ritmo?</summary><p>Repita os dias que quiser. O ritmo é dele. Se a dificuldade persistir, o guia indica quando procurar um profissional.</p></details>
+    <details><summary>E se eu perder a paciência?</summary><p>Isso acontece. O guia traz frases prontas e um passo a passo para recomeçar, e o Plano de 5 minutos para os dias difíceis.</p></details>
+    <details><summary>Como recebo?</summary><p>Pelo e-mail da compra, na hora.</p></details>
+    <p class="centro" style="margin-top:28px"><a href="#oferta" class="botao" data-comprar>Quero o guia por R$ 27</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#fff">Lê Comigo</strong> · Primeiros Passos na Leitura</p>
+    <p>Material de apoio para pais. Não substitui a escola nem a avaliação de profissionais de saúde ou educação. Ilustrações originais. O pagamento e a entrega são feitos pela plataforma de venda.</p>
+    <p>Dúvidas: responda o e-mail da compra.</p>
+  </div>
+</footer>
+
+<div class="barra" id="barra">
+  <div class="p">R$ 27<small>garantia de 7 dias</small></div>
+  <a href="#oferta" class="botao" data-comprar>Quero o guia</a>
+</div>
+
+<dialog id="zoom">
+  <form method="dialog"><button class="fechar" aria-label="Fechar">×</button></form>
+  <img id="zoom-img" alt="Página ampliada do guia">
+</dialog>
+
+<script>
+// Cole aqui o link do checkout (Hotmart ou Kiwify) quando o produto estiver cadastrado.
+const CHECKOUT_URL = "";
+// ID do pixel da Meta, só quando for anunciar (deixe vazio até lá).
+const META_PIXEL_ID = "";
+
+(function () {
+  const botoes = document.querySelectorAll("[data-comprar]");
+  if (CHECKOUT_URL) {
+    const params = new URLSearchParams(location.search);
+    const url = new URL(CHECKOUT_URL);
+    ["utm_source", "utm_medium", "utm_campaign", "utm_content", "src", "sck"].forEach(function (k) {
+      if (params.get(k)) url.searchParams.set(k, params.get(k));
+    });
+    botoes.forEach(function (b) {
+      b.href = url.toString();
+      b.addEventListener("click", function () { if (window.fbq) fbq("track", "InitiateCheckout"); });
+    });
+  } else {
+    document.body.classList.add("sem-link");
+  }
+
+  if (META_PIXEL_ID) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq("init", META_PIXEL_ID);
+    fbq("track", "PageView");
+  }
+
+  const zoom = document.getElementById("zoom");
+  const zoomImg = document.getElementById("zoom-img");
+  document.querySelectorAll("#galeria button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      zoomImg.src = b.dataset.img;
+      zoomImg.alt = b.querySelector("img").alt;
+      zoom.showModal();
+    });
+  });
+  zoom.addEventListener("click", function (e) { if (e.target === zoom) zoom.close(); });
+
+  const barra = document.getElementById("barra");
+  const hero = document.querySelector(".hero");
+  const oferta = document.getElementById("oferta");
+  let passouHero = false, naOferta = false;
+  const atualiza = function () { barra.classList.toggle("visivel", passouHero && !naOferta); };
+  new IntersectionObserver(function (e) { passouHero = !e[0].isIntersecting; atualiza(); }).observe(hero);
+  new IntersectionObserver(function (e) { naOferta = e[0].isIntersecting; atualiza(); }).observe(oferta);
+})();
+</script>
+</body>
+</html>
